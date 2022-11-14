@@ -1,0 +1,47 @@
+{
+    "kind": "collectionType",
+    "collectionName": "parents",
+    "info": {
+        "singularName": "parent",
+        "pluralName": "parents",
+        "displayName": "parent",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "parent_type": {
+            "type": "enumeration",
+            "enum": [
+                "Отец",
+                "Мать",
+                "Бабушка",
+                "Дедушка",
+                "Законный представитель"
+            ]
+        },
+        "firstname": {
+            "type": "string"
+        },
+        "lastname": {
+            "type": "string"
+        },
+        "patronymic": {
+            "type": "string"
+        },
+        "position": {
+            "type": "string"
+        },
+        "phone": {
+            "type": "string"
+        },
+        "applications": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::application.application",
+            "mappedBy": "parents"
+        }
+    }
+}

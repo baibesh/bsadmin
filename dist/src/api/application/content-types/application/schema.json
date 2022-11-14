@@ -1,0 +1,83 @@
+{
+    "kind": "collectionType",
+    "collectionName": "applications",
+    "info": {
+        "singularName": "application",
+        "pluralName": "applications",
+        "displayName": "application",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "email": {
+            "type": "string"
+        },
+        "phone": {
+            "type": "string"
+        },
+        "iin": {
+            "type": "string"
+        },
+        "firstname": {
+            "type": "string"
+        },
+        "lastname": {
+            "type": "string"
+        },
+        "patronymic": {
+            "type": "string"
+        },
+        "groupOrClass": {
+            "type": "string"
+        },
+        "nationality": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "api::nationality.nationality"
+        },
+        "education_organization": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "api::education-organization.education-organization"
+        },
+        "social_status_family": {
+            "type": "enumeration",
+            "enum": [
+                "Полная",
+                "Неполная"
+            ]
+        },
+        "diseases": {
+            "type": "enumeration",
+            "enum": [
+                "Да",
+                "Нет"
+            ]
+        },
+        "parents": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::parent.parent",
+            "inversedBy": "applications"
+        },
+        "idCard": {
+            "allowedTypes": [
+                "images",
+                "files"
+            ],
+            "type": "media",
+            "multiple": false
+        },
+        "medicalReport027": {
+            "allowedTypes": [
+                "images",
+                "files"
+            ],
+            "type": "media",
+            "multiple": false
+        }
+    }
+}

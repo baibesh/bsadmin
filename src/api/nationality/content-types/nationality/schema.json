@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nationalities",
+  "info": {
+    "singularName": "nationality",
+    "pluralName": "nationalities",
+    "displayName": "nationality"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name_kk": {
+      "type": "string"
+    },
+    "name_ru": {
+      "type": "string"
+    },
+    "name_en": {
+      "type": "string"
+    }
+  }
+}

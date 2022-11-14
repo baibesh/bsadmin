@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "education_organizations",
+  "info": {
+    "singularName": "education-organization",
+    "pluralName": "education-organizations",
+    "displayName": "education-organization"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name_kk": {
+      "type": "string"
+    },
+    "name_ru": {
+      "type": "string"
+    },
+    "name_en": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    }
+  }
+}
