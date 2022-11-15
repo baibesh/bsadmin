@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clubs",
+  "info": {
+    "singularName": "club",
+    "pluralName": "clubs",
+    "displayName": "club"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title_ru": {
+      "type": "string"
+    },
+    "description_ru": {
+      "type": "richtext"
+    },
+    "description_kk": {
+      "type": "richtext"
+    },
+    "description_en": {
+      "type": "richtext"
+    },
+    "title_kk": {
+      "type": "string"
+    },
+    "title_en": {
+      "type": "string"
+    },
+    "photo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "tutor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tutor.tutor",
+      "inversedBy": "clubs"
+    },
+    "applications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::application.application",
+      "mappedBy": "club"
+    }
+  }
+}
